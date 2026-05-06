@@ -112,21 +112,21 @@ const WC = {
     id:'universidade', idx:2, label:'A UNIVERSIDADE · TÉRREO',
     sub:'o entusiasmo que ninguém te avisou que ia virar método',
     year:'2019', w:3800, startX:200, exitX:3770, dilemaX:3350,
-    dilema:"pesquisar é uma profissão no Brasil?\n\ndepende de quem você pergunta,\nde que universidade, de que ano.\n\nmas é uma forma de existir no mundo\nque tem nome e tem história.",
+    dilema:"pesquisar é uma profissão no Brasil?\n\ndepende de quem você pergunta,\nde que universidade, de que ano.\n\nmas é uma forma de existir no mundo.",
     next:'terapia', nextYear:null,
   },
   terapia: {
     id:'terapia', idx:3, label:'A TERAPIA',
     sub:'o lugar onde você pode dizer que não sabe',
     year:null, w:1500, startX:390, exitX:1440, dilemaX:1180,
-    dilema:"cuidar de si deveria ser acessível\npra todo pesquisador.\n\nnão é.\n\nmas você está aqui.\nisso importa.",
+    dilema:"cuidar de si deveria ser acessível\npra todo pesquisador.\n\nnão é.\n\nmas você está aqui.",
     next:'mestrado', nextYear:'2022', seated:true,
   },
   mestrado: {
     id:'mestrado', idx:4, label:'A UNIVERSIDADE · 2º ANDAR',
     sub:'o que se aprende sem disciplina obrigatória',
     year:'2022', w:2800, startX:200, exitX:2740, dilemaX:2350,
-    dilema:"você abriu mão de outras coisas.\n\nainda abre.\n\nmas esse conhecimento\nnão caberia em outro lugar.",
+    dilema:"você abriu mão de outras coisas.\n\nainda abre.",
     next:'doutorado', nextYear:'2024',
   },
   doutorado: {
@@ -151,7 +151,7 @@ const WC = {
 const OBJS_POOL = {
   casa: [
     { id:'janela',   label:'janela',            x:372, y:CEIL+2,   w:96,  h:128, tx:330,  tw:180, good:true,  hover:true, visited:false, _hv:0,
-      text:"hoje choveu e você tomou\ncafé quentinho com tempo.\n\nisso foi suficiente." },
+      text:"hoje choveu e você tomou\ncafé quentinho com tempo." },
     { id:'caderno',  label:'caderno de notas',  x:670, y:FLOOR-57, w:32,  h:46,  tx:626,  tw:120, good:true,  visited:false, _hv:0,
       text:"você escreveu isso às 23h depois de\nler um artigo que encaixou em outro\nartigo que encaixou em algo que você\njá pensava.\n\nesse momento existe." },
     { id:'mesa',     label:'mesa (hoje arrumada)', x:590, y:FLOOR-32, w:170, h:18, tx:550, tw:250, good:true,  visited:false, _hv:0,
@@ -161,11 +161,11 @@ const OBJS_POOL = {
     { id:'gelad',    label:'geladeira',         x:1528,y:FLOOR-152,w:68,  h:152, tx:1480, tw:170, good:false, visited:false, _hv:0,
       text:"arroz, feijão,\num iogurte vencido ontem.\n\nbolsa PIBIC: R$ 700.\naluguel: R$ 650.\nconta de luz: pendente." },
     { id:'artigos',  label:'pilha de artigos',  x:1726,y:FLOOR-88, w:52,  h:88,  tx:1685, tw:140, good:false, visited:false, _hv:0,
-      text:"são 47.\n\nvocê leu 12.\n\nos outros 35 te olham." },
+      text:"são 47.\n\nvocê leu 12." },
     { id:'cama',     label:'cama',              x:2200,y:FLOOR-82, w:228, h:82,  tx:2150, tw:340, good:false, visited:false, _hv:0,
       text:"você dorme aqui\nentre as leituras." },
     { id:'planta',   label:'planta murcha',     x:2585,y:FLOOR-102,w:42,  h:102, tx:2540, tw:140, good:false, visited:false, _hv:0,
-      text:"você esqueceu de regar\nde novo.\n\nnão é uma metáfora.\n\nou é." },
+      text:"você esqueceu de regar\nde novo." },
   ],
 
   universidade: [
@@ -176,13 +176,13 @@ const OBJS_POOL = {
     { id:'bibliot', label:'biblioteca',              x:860, y:CEIL,     w:120,h:RH,  tx:800, tw:260, good:true,  visited:false, _hv:0,
       text:"você veio devolver um livro\ne ficou três horas.\n\nnão por obrigação.\nporque o próximo capítulo\nera bom demais pra parar." },
     { id:'artigo',  label:'primeiro artigo',         x:1020,y:FLOOR-58, w:54, h:50,  tx:965, tw:160, good:true,  visited:false, _hv:0, flash:true,
-      text:"isso.\n\nera isso que você queria entender.\n\nexistem perguntas que só\na pesquisa consegue fazer." },
+      text:"isso.\n\nera isso que você queria entender." },
     { id:'orient_f',label:'sala do orientador',      x:1490,y:CEIL+10,  w:78, h:RH-10,tx:1430,tw:185,good:false,visited:false, _hv:0,
       text:"você mandou e-mail há 4 dias." },
     { id:'seminar', label:'seminário de IC',          x:2080,y:FLOOR-180,w:350,h:180, tx:2020,tw:490, good:true,  visited:false, _hv:0,
-      text:"a sala tem cinco pessoas.\na voz treme.\n\nno final um colega pergunta algo\ngenuíno sobre o trabalho dela.\n\nalguém achou sua pesquisa\ninteressante o suficiente\npra querer saber mais.\n\nisso não era pouco." },
+      text:"a sala tem cinco pessoas.\na voz treme.\n\nno final um colega pergunta algo\ngenuíno sobre o trabalho dela." },
     { id:'grupo',   label:'sala do grupo de pesquisa',x:2740,y:CEIL,    w:380,h:RH,  tx:2680,tw:500, good:true,  visited:false, _hv:0,
-      text:"alguém perguntou:\n'alguém leu o Latour?'\nninguém respondeu.\nela anotou o nome.\n\ntrês semanas depois\nela entendeu o Latour.\n\nfoi difícil e foi ótimo." },
+      text:"alguém perguntou:\n'alguém leu o Latour?'\nninguém respondeu.\nela anotou o nome.\n\ntrês semanas depois\nela entendeu o Latour." },
     { id:'orient_a',label:'sala do orientador (aberta)',x:3360,y:CEIL+10,w:78,h:RH-10,tx:3300,tw:185,good:true, visited:false, _hv:0,
       text:"ele disse:\n'essa pergunta é boa.'\n\nvocê não sabia que uma pergunta\npodia ser boa.\n\nachava que só respostas contavam." },
   ],
@@ -201,7 +201,7 @@ const OBJS_POOL = {
     { id:'caderno_t',label:'caderno da terapeuta', x:718, y:FLOOR-62,w:36, h:52, tx:660, tw:150, good:true,  visited:false, _hv:0,
       text:"ela não te mostra.\nvocê imagina o que está escrito.\n\nprovavelmente algo mais gentil\ndo que você escreveria." },
     { id:'janela_t', label:'janela',               x:960, y:CEIL+18, w:90, h:120,tx:900, tw:200, good:true,  hover:true, visited:false, _hv:0,
-      text:"a terapeuta perguntou\no que te faz continuar.\n\nvocê respondeu sem pensar muito:\n'a curiosidade.\neu ainda quero saber.'\n\nela disse que isso é suficiente." },
+      text:"a terapeuta perguntou\no que te faz continuar.\n\nvocê respondeu sem pensar muito:\n'a curiosidade.\neu ainda quero saber.'" },
     { id:'porta_s',  label:'porta (saída)',        x:1318,y:FLOOR-210,w:72,h:210,tx:1260,tw:170, good:true,  visited:false, _hv:0,
       text:"você saiu mais leve.\n\nnão resolvida. mais leve." },
   ],
@@ -213,7 +213,7 @@ const OBJS_POOL = {
     { id:'planilha', label:'planilha',              x:668, y:FLOOR-48, w:62, h:36,  tx:600, tw:280, good:false, visited:false, _hv:0,
       text:"bolsa CAPES: R$ 2.100.\naluguel: R$ 1.100.\ntransporte: R$ 200.\nalimentação: R$ 380.\n\nsobra: R$ 420.\n\nvocê não tem dívida.\nvocê também não tem margem." },
     { id:'versao',   label:'dissertação v.11',      x:1280,y:FLOOR-40, w:80, h:48,  tx:1210,tw:270, good:false, visited:false, _hv:0,
-      text:"versão 11.\n\nvocê releu a versão 3\ne achou melhor.\n\nisso não é bom sinal.\n\nou é." },
+      text:"versão 11.\n\nvocê releu a versão 3\ne achou melhor.\n\nisso não é bom sinal." },
     { id:'sigaa',    label:'tela do SIGAA',         x:1678,y:FLOOR-108,w:88, h:64,  tx:1610,tw:270, good:false, visited:false, _hv:0,
       text:"o sistema está fora do ar.\n\nestava ontem também." },
     // BOM
@@ -360,7 +360,7 @@ function updateTransition(dt) {
       break;
     case 'show':
       TR.timer += dt;
-      if (TR.timer > 2.0) { TR.state = 'in'; }
+      if (TR.timer > 5.0) { TR.state = 'in'; }
       break;
     case 'in':
       TR.alpha = Math.max(0, TR.alpha - dt * 1.8);
@@ -1830,9 +1830,6 @@ function drawFlash() {
     ctx.fillStyle=`rgba(201,169,110,${ta})`;
     ctx.font=`italic 17px 'Courier Prime'`; ctx.textAlign='center';
     ctx.fillText('isso. era isso que você queria entender.',CW/2,CH/2-10);
-    ctx.fillStyle=`rgba(201,169,110,${ta*0.55})`;
-    ctx.font="13px 'Courier Prime'";
-    ctx.fillText('existem perguntas que só a pesquisa consegue fazer.',CW/2,CH/2+14);
     ctx.textAlign='left';
   }
 }
