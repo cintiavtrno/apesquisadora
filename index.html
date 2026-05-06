@@ -105,7 +105,7 @@ const WC = {
     id:'casa', idx:1, label:'A CASA',
     sub:'o que não aparece no currículo lattes',
     year:'2018', w:3300, startX:200, exitX:3270, dilemaX:2900,
-    dilema:"você escolheu isso.\n\nvocê ainda escolheria?\n\na maioria responde que sim.\nnão por ingenuidade.\npelo que ainda quer entender.",
+    dilema:"você escolheu isso.\n\nvocê ainda escolheria?\n\na maioria responde que sim.",
     next:'universidade', nextYear:'2019',
   },
   universidade: {
@@ -153,9 +153,9 @@ const OBJS_POOL = {
     { id:'janela',   label:'janela',            x:372, y:CEIL+2,   w:96,  h:128, tx:330,  tw:180, good:true,  hover:true, visited:false, _hv:0,
       text:"hoje choveu e você tomou\ncafé quentinho com tempo." },
     { id:'caderno',  label:'caderno de notas',  x:670, y:FLOOR-57, w:32,  h:46,  tx:626,  tw:120, good:true,  visited:false, _hv:0,
-      text:"você escreveu isso às 23h depois de\nler um artigo que encaixou em outro\nartigo que encaixou em algo que você\njá pensava.\n\nesse momento existe." },
+      text:"você escreveu isso às 23h depois de\nler um artigo que encaixou em outro\nartigo que encaixou em algo que você\njá pensava." },
     { id:'mesa',     label:'mesa (hoje arrumada)', x:590, y:FLOOR-32, w:170, h:18, tx:550, tw:250, good:true,  visited:false, _hv:0,
-      text:"você organizou tudo.\n\nnão porque terminou.\nqueria começar amanhã com clareza." },
+      text:"você organizou tudo." },
     { id:'foto',     label:'foto na parede',    x:852, y:CEIL+72,  w:58,  h:72,  tx:810,  tw:144, good:true,  visited:false, _hv:0,
       text:"sua amiga do lab.\n\nvocês se mandam mensagem\ntodo dia.\n\nnão sobre a pesquisa.\nsobre tudo." },
     { id:'gelad',    label:'geladeira',         x:1528,y:FLOOR-152,w:68,  h:152, tx:1480, tw:170, good:false, visited:false, _hv:0,
@@ -174,9 +174,9 @@ const OBJS_POOL = {
     { id:'xerox',   label:'xerox',                   x:540, y:FLOOR-108,w:68, h:108, tx:490, tw:168, good:false, visited:false, _hv:0,
       text:"R$ 2,40.\n\nvocê tem R$ 2,40 contados." },
     { id:'bibliot', label:'biblioteca',              x:860, y:CEIL,     w:120,h:RH,  tx:800, tw:260, good:true,  visited:false, _hv:0,
-      text:"você veio devolver um livro\ne ficou três horas.\n\nnão por obrigação.\nporque o próximo capítulo\nera bom demais pra parar." },
+      text:"você veio devolver um livro\ne ficou três horas." },
     { id:'artigo',  label:'primeiro artigo',         x:1020,y:FLOOR-58, w:54, h:50,  tx:965, tw:160, good:true,  visited:false, _hv:0, flash:true,
-      text:"isso.\n\nera isso que você queria entender." },
+      text:"isso." },
     { id:'orient_f',label:'sala do orientador',      x:1490,y:CEIL+10,  w:78, h:RH-10,tx:1430,tw:185,good:false,visited:false, _hv:0,
       text:"você mandou e-mail há 4 dias." },
     { id:'seminar', label:'seminário de IC',          x:2080,y:FLOOR-180,w:350,h:180, tx:2020,tw:490, good:true,  visited:false, _hv:0,
@@ -184,7 +184,7 @@ const OBJS_POOL = {
     { id:'grupo',   label:'sala do grupo de pesquisa',x:2740,y:CEIL,    w:380,h:RH,  tx:2680,tw:500, good:true,  visited:false, _hv:0,
       text:"alguém perguntou:\n'alguém leu o Latour?'\nninguém respondeu.\nela anotou o nome.\n\ntrês semanas depois\nela entendeu o Latour." },
     { id:'orient_a',label:'sala do orientador (aberta)',x:3360,y:CEIL+10,w:78,h:RH-10,tx:3300,tw:185,good:true, visited:false, _hv:0,
-      text:"ele disse:\n'essa pergunta é boa.'\n\nvocê não sabia que uma pergunta\npodia ser boa.\n\nachava que só respostas contavam." },
+      text:"ele disse:\n'essa pergunta é boa.'\n\nvocê foi embora mais devagar\ndo que entrou." },
   ],
 
   terapia: [
@@ -197,13 +197,13 @@ const OBJS_POOL = {
              "não.\né síndrome.",
              "tá."] },
     { id:'sessao',   label:'sessão de hoje',       x:400, y:FLOOR-80,w:50, h:80, tx:350, tw:180, good:true,  visited:false, _hv:0,
-      text:"foi uma sessão boa.\nvocê chorou um pouco.\n\na terapeuta disse que não precisa\nser produtivo pra ter valor.\n\nvocê anotou isso no celular.\nvai precisar reler várias vezes." },
+      text:"foi uma sessão boa.\nvocê chorou um pouco.\n\na terapeuta disse que não precisa\nser produtivo pra ter valor.\n\nvocê anotou isso no celular." },
     { id:'caderno_t',label:'caderno da terapeuta', x:718, y:FLOOR-62,w:36, h:52, tx:660, tw:150, good:true,  visited:false, _hv:0,
-      text:"ela não te mostra.\nvocê imagina o que está escrito.\n\nprovavelmente algo mais gentil\ndo que você escreveria." },
+      text:"ela não te mostra.\nvocê imagina o que está escrito." },
     { id:'janela_t', label:'janela',               x:960, y:CEIL+18, w:90, h:120,tx:900, tw:200, good:true,  hover:true, visited:false, _hv:0,
       text:"a terapeuta perguntou\no que te faz continuar.\n\nvocê respondeu sem pensar muito:\n'a curiosidade.\neu ainda quero saber.'" },
     { id:'porta_s',  label:'porta (saída)',        x:1318,y:FLOOR-210,w:72,h:210,tx:1260,tw:170, good:true,  visited:false, _hv:0,
-      text:"você saiu mais leve.\n\nnão resolvida. mais leve." },
+      text:"você saiu mais leve." },
   ],
 
   mestrado: [
@@ -211,27 +211,27 @@ const OBJS_POOL = {
     { id:'prazo',    label:'mural de prazos',      x:295, y:CEIL+18,  w:130,h:100, tx:230, tw:280, good:false, visited:false, _hv:0,
       text:"qualificação: 4 semanas.\ndissertação: agosto.\n\nbolsa CAPES: encerra com o título.\n\nvocê tinha 24 meses.\nfaltam 6." },
     { id:'planilha', label:'planilha',              x:668, y:FLOOR-48, w:62, h:36,  tx:600, tw:280, good:false, visited:false, _hv:0,
-      text:"bolsa CAPES: R$ 2.100.\naluguel: R$ 1.100.\ntransporte: R$ 200.\nalimentação: R$ 380.\n\nsobra: R$ 420.\n\nvocê não tem dívida.\nvocê também não tem margem." },
+      text:"bolsa CAPES: R$ 2.100.\naluguel: R$ 1.100.\ntransporte: R$ 200.\nalimentação: R$ 380.\n\nsobra: R$ 420.\n\nvocê não tem dívida." },
     { id:'versao',   label:'dissertação v.11',      x:1280,y:FLOOR-40, w:80, h:48,  tx:1210,tw:270, good:false, visited:false, _hv:0,
       text:"versão 11.\n\nvocê releu a versão 3\ne achou melhor.\n\nisso não é bom sinal." },
     { id:'sigaa',    label:'tela do SIGAA',         x:1678,y:FLOOR-108,w:88, h:64,  tx:1610,tw:270, good:false, visited:false, _hv:0,
       text:"o sistema está fora do ar.\n\nestava ontem também." },
     // BOM
     { id:'diario',   label:'diário de campo',       x:418, y:FLOOR-76, w:66, h:48,  tx:350, tw:260, good:true,  visited:false, _hv:0,
-      text:"setembro de 2022.\n\nvocê entendeu por que escolheu\nesse objeto.\n\nnão porque era relevante.\nporque precisava entender." },
+      text:"setembro de 2022.\n\nvocê entendeu por que escolheu\nesse objeto." },
     { id:'livro_m',  label:'livro com marcações',   x:868, y:CEIL+28,  w:58, h:88,  tx:800, tw:260, good:true,  visited:false, _hv:0,
       text:"você leu isso três vezes.\n\nna segunda,\nvocê discordou da autora.\n\nna terceira,\nvocê entendeu que ela tinha razão.\n\ndemorou um ano." },
     { id:'orient_m', label:'caderno de orientação', x:1380,y:FLOOR-68, w:50, h:48,  tx:1310,tw:260, good:true,  visited:false, _hv:0,
-      text:"ela disse:\n'você está pesquisando\na coisa certa.'\n\nnão disse que era bom.\ndisse que era certo." },
+      text:"ela disse:\n'você está pesquisando\na coisa certa.'" },
     { id:'cafe_m',   label:'café com colega',       x:2168,y:FLOOR-58, w:54, h:36,  tx:2090,tw:260, good:true,  visited:false, _hv:0,
-      text:"ele entende quando você fala\nde metodologia às 23h.\n\nnão todo mundo entende.\n\nele entende." },
+      text:"ele entende quando você fala\nde metodologia às 23h." },
   ],
 
   doutorado: [
     { id:'prazo_d',   label:'mural de prazos',       x:295, y:CEIL+18,  w:120,h:90,  tx:225, tw:270, good:false, visited:false, _hv:0,
-      text:"defesa: 18 meses.\n\na tese ainda não tem um centro." },
+      text:"defesa: 18 meses." },
     { id:'planilha_d',label:'planilha',              x:660, y:FLOOR-50, w:62, h:38,  tx:588, tw:280, good:false, visited:false, _hv:0,
-      text:"bolsa CAPES: R$ 3.100.\naluguel: R$ 1.400.\ntransporte: R$ 180.\nalimentação: R$ 420.\n\nquatro anos de tese." },
+      text:"bolsa CAPES: R$ 3.100.\naluguel: R$ 1.400.\ntransporte: R$ 180.\nalimentação: R$ 420." },
     { id:'ia_tela',   label:'tela do laptop',        x:1148,y:FLOOR-54, w:60, h:40,  tx:1076,tw:280, good:false, visited:false, _hv:0,
       text:"você colou um parágrafo torto\ne pediu ao modelo pra reorganizar.\n\nficou melhor.\n\nvocê ficou olhando pra tela\npor um tempo.\n\nfechou o laptop." },
     { id:'parecer',   label:'parecer do revisor',    x:1868,y:FLOOR-60, w:80, h:50,  tx:1796,tw:270, good:false, visited:false, _hv:0,
@@ -241,7 +241,7 @@ const OBJS_POOL = {
     { id:'cracha',    label:'crachá de congresso',   x:948, y:CEIL+28,  w:52, h:72,  tx:876, tw:260, good:true,  visited:false, _hv:0,
       text:"cidade nova.\nlíngua estranha.\n\nvocê apresentou em inglês.\ntremeu um pouco.\n\ndepois parou de tremer.\nalguém na plateia anotou algo." },
     { id:'grupo_d',   label:'anotações no quadro',   x:1378,y:CEIL+20,  w:130,h:110, tx:1306,tw:270, good:true,  visited:false, _hv:0,
-      text:"você conheceu pesquisadores\nde três países diferentes.\n\nestavam todos fazendo\na mesma pergunta.\n\ncada um de uma forma." },
+      text:"você conheceu pesquisadores\nde três países diferentes.\n\nestavam todos fazendo\na mesma pergunta." },
     { id:'escrita',   label:'laptop (no fluxo)',     x:2048,y:FLOOR-54, w:62, h:40,  tx:1976,tw:270, good:true,  visited:false, _hv:0,
       text:"das 14h às 19h\nvocê escreveu sem parar.\n\nquando levantou\nnão sabia quanto tempo tinha passado." },
   ],
@@ -256,13 +256,13 @@ const OBJS_POOL = {
     { id:'banca',    label:'banca de revista',        x:1758,y:FLOOR-130,w:85, h:130, tx:1681,tw:270, good:false, visited:false, _hv:0,
       text:"'você tem um livro sobre isso?'\n\na vendedora estava esperando\nresposta.\n\nvocê ficou pensando\npor tempo demais." },
     { id:'praia',    label:'vista do mar',            x:378, y:CEIL+2,   w:100,h:RH,  tx:306, tw:270, good:true, hover:true, visited:false, _hv:0,
-      text:"você ficou parada\nolhando pro mar.\n\nnada em específico.\n\nsó o mar." },
+      text:"você ficou parada\nolhando pro mar." },
     { id:'amiga_r',  label:'amiga de infância',       x:948, y:FLOOR-90, w:54, h:90,  tx:874, tw:270, good:true,  visited:false, _hv:0,
-      text:"ela perguntou como você estava.\nnão a pesquisa.\nvocê.\n\nvocê não sabia muito bem.\n\ncomeçou a falar\ne não parou tão cedo." },
+      text:"ela perguntou como você estava.\nvocê não sabia muito bem.\n\ncomeçou a falar." },
     { id:'musica_r', label:'roda de pagode',          x:1518,y:FLOOR-100,w:80, h:100, tx:1441,tw:270, good:true,  visited:false, _hv:0,
       text:"uma roda de pagode\nnum quintal em Cajazeiras.\n\nvocê conhecia duas músicas.\ncantou as duas.\n\ndepois ficou quieta\nescutando." },
     { id:'baia',     label:'vista da baía',           x:1968,y:CEIL+2,   w:100,h:RH,  tx:1891,tw:270, good:true, hover:true, visited:false, _hv:0,
-      text:"a baía fica assim\nàs 17h de qualquer dia.\n\nvocê viu isso\na vida inteira.\n\nainda para." },
+      text:"a baía fica assim\nàs 17h de qualquer dia.\n\nvocê viu isso\na vida inteira." },
   ],
 };
 
@@ -1829,7 +1829,7 @@ function drawFlash() {
     const ta=Math.min(1,(t-0.5)/0.35);
     ctx.fillStyle=`rgba(201,169,110,${ta})`;
     ctx.font=`italic 17px 'Courier Prime'`; ctx.textAlign='center';
-    ctx.fillText('isso. era isso que você queria entender.',CW/2,CH/2-10);
+    ctx.fillText('isso.',CW/2,CH/2-10);
     ctx.textAlign='left';
   }
 }
